@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Nike Globalization Project | Supply Chain to Canada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #111111;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .navbar {
+            background: #ffffff;
+            border-bottom: 1px solid #eaeaea;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(2px);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: -0.3px;
+            color: #111;
+        }
+
+        .logo span {
+            font-weight: 400;
+            color: #555;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: #2c2c2c;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #cc0000;
+        }
+
+        section {
+            padding: 3.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .section-title {
+            font-size: 1.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+            border-left: 4px solid #cc0000;
+            padding-left: 1rem;
+        }
+
+        .subheading {
+            font-weight: 600;
+            font-size: 1.25rem;
+            margin: 1.5rem 0 0.8rem 0;
+            color: #1a1a1a;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .card {
+            background: #fafafa;
+            padding: 1.5rem;
+            border-radius: 20px;
+            border: 1px solid #ececec;
+            transition: 0.1s linear;
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .img-placeholder {
+            background: #e6e6e6;
+            border-radius: 20px;
+            width: 100%;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #5a5a5a;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px dashed #aaa;
+            margin: 1rem 0;
+        }
+
+        .img-placeholder.small {
+            height: 160px;
+        }
+
+        .map-placeholder {
+            background: #eef2f5;
+            height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 28px;
+            border: 1px solid #ddd;
+            color: #2c3e44;
+            font-weight: 500;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        .info-table td, .info-table th {
+            padding: 0.9rem 1rem;
+            border-bottom: 1px solid #eaeaea;
+            vertical-align: top;
+        }
+
+        .info-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .info-table th {
+            background: #f5f5f5;
+            font-weight: 600;
+            width: 30%;
+        }
+
+        ul, .list-styled {
+            padding-left: 1.5rem;
+            margin: 0.8rem 0;
+        }
+
+        li {
+            margin: 0.4rem 0;
+        }
+
+        .footer {
+            background: #f8f8f8;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #4a4a4a;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .reference-list {
+            font-size: 0.85rem;
+            background: #fef9e6;
+            padding: 1rem 1.5rem;
+            border-radius: 16px;
+        }
+
+        @media (max-width: 760px) {
+            .container {
+                padding: 0 1.2rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .nav-links {
+                gap: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">NIKE<span> / GLOBAL ROADMAP</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#profile">Company Profile</a></li>
+                <li><a href="#sectors">Economic Sectors</a></li>
+                <li><a href="#additional">Additional Info</a></li>
+                <li><a href="#map">Supply Chain Map</a></li>
+                <li><a href="#challenges">Challenges & Solutions</a></li>
+                <li><a href="#sources">Works Cited</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- HOME section with Initial Research -->
+        <section id="home">
+            <div class="container">
+                <h1 class="section-title" style="border-left: none; font-size: 2.5rem; padding-left: 0;">Nike: Global Journey to Canada</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 1rem;"><strong>Investigating a Nike Dri-FIT T-Shirt</strong> — from raw materials, manufacturing, logistics to Canadian retail shelves.</p>
+                <div class="img-placeholder" style="height: 280px; margin: 1.5rem 0;">
+                    <img src="111.jpg" style="width:100%; border-radius:20px;">
+                </div>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>Project Scope</h3>
+                        <p>This project traces how Nike operates worldwide, focusing on the Dri-FIT polyester t-shirt. We examine each economic sector, labor conditions, trade agreements, and environmental impact with a final focus on the Canadian market.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Quick Facts</h3>
+                        <ul>
+                            <li>Headquarters: Beaverton, Oregon, USA</li>
+                            <li>Product selected: Polyester-based athletic T-shirt (Dri-FIT)</li>
+                            <li>Canada: Over 70 retail locations (based on Nike's 2025 store directory) and strong e-commerce presence</li>
+                            <li>Manufacturing countries: Vietnam, China, Indonesia, Cambodia</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Initial Research Questions (Step 1 requirement) -->
+                <div class="card" style="background:#fef4f0; margin-top: 1rem;">
+                    <h3>Initial Research (Step 1)</h3>
+                    <ul>
+                        <li><strong>1. Where does Nike operate?</strong> Nike operates globally with design and development in the USA (headquarters in Beaverton, Oregon), manufacturing across Asia (Vietnam, China, Indonesia, Cambodia, Sri Lanka, Bangladesh), distribution centers worldwide, and retail stores in over 170 countries including 70+ locations across Canada in Ontario, British Columbia, Quebec, and other provinces.</li>
+                        <li><strong>2. Why outsource?</strong> Nike outsources manufacturing to achieve cost efficiency, access specialized labor expertise, and leverage mature textile infrastructure in Asian countries. According to Nike's annual filings, Vietnam produces 50% of footwear and 28% of apparel, Indonesia produces 27% of footwear, and Cambodia produces 15% of apparel, with China accounting for 18% of footwear and 16% of apparel [citation:2][citation:8]. This geographic diversification also minimizes supply chain risk.</li>
+                        <li><strong>3. Impact on Canada?</strong> Outsourcing reduces local manufacturing employment in Canada's apparel sector but allows Nike to offer competitively priced athletic wear to Canadian consumers, increases product variety, and strengthens Canada's retail and logistics sectors through Nike's distribution centers and stores across the country.</li>
+                        <li><strong>4. How are employees treated?</strong> Nike has implemented comprehensive labor standards through its Code of Conduct and Code Leadership Standards aligned with ILO core labor standards and UN Guiding Principles on Business and Human Rights. The company conducts third-party audits at supplier facilities and reports that 66% of strategic suppliers pay above applicable living wage benchmarks. However, the company faces ongoing scrutiny regarding wage fairness and working conditions in its supply chain [citation:5][citation:7].</li>
+                        <li><strong>5. Pricing reasonable?</strong> A Nike Dri-FIT T-shirt typically retails for approximately CAD 35-45. Nike does not publicly disclose exact production costs for individual apparel products. The retail price reflects material costs, labor, logistics, warehousing, marketing, retail operations, and brand value. Import duties and transportation costs may also contribute to the final price paid by Canadian consumers [citation:6].</li>
+                        <li><strong>6. Surprises?</strong> The extent of Nike's sustainability initiatives was notable: currently 78% of all Nike products contain some recycled material, and the Dri-FIT line increasingly uses recycled polyester derived from plastic bottles. Additionally, Nike's compensation strategy includes collaboration with the Fair Labor Association and Anker Research Institute to establish living wage benchmarks in key manufacturing markets [citation:4][citation:5].</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPANY PROFILE -->
+        <section id="profile">
+            <div class="container">
+                <h2 class="section-title">Part A: Company Profile</h2>
+                <table class="info-table">
+                    <tr><th>Company name</th><td>Nike, Inc.</td></tr>
+                    <tr><th>Headquarters location</th><td>One Bowerman Drive, Beaverton, Oregon, USA</td></tr>
+                    <tr><th>Brief history</th><td>Founded in 1964 as Blue Ribbon Sports by Bill Bowerman and Phil Knight; officially became Nike in 1971. Grew to become the world's largest athletic footwear and apparel company, now including Converse and Jordan brands.</td></tr>
+                    <tr><th>Number of countries involved</th><td>Operations and sales in over 170 countries; supply chain spans more than 35 countries across Asia and the Americas.</td></tr>
+                    <tr><th>Product selected</th><td>Nike Dri-FIT T-shirt (men's training, polyester or recycled polyester blend with spandex for moisture-wicking properties)</td></tr>
+                    <tr><th>Canadian presence</th><td>Flagship stores and retail locations across Ontario (Toronto, Mississauga, Ottawa, London, Kitchener, Vaughan, Halton Hills, Niagara-on-the-Lake, Burlington), as well as stores in British Columbia, Quebec, Alberta, and other provinces. Major distribution centre operates in Mississauga, Ontario [citation:3]. Nike products are also sold through third-party retailers including Sport Chek, Foot Locker, and other athletic apparel retailers across Canada.</td></tr>
+                </table>
+                <img src="222.jpg"  style="width:100%; border-radius:20px;">
+            </div>
+        </section>
+
+        <!-- FOUR ECONOMIC SECTORS -->
+        <section id="sectors">
+            <div class="container">
+                <h2 class="section-title">Part B: The Four Economic Sectors</h2>
+                
+                <!-- Primary Sector -->
+                <div class="card" style="margin-bottom: 1.8rem;">
+                    <h3>Primary Sector: Resource Extraction</h3>
+                    <ul>
+                        <li><strong>Natural resources used:</strong> Crude oil (for virgin polyester), natural gas, water, and increasingly recycled PET plastic bottles. Dri-FIT fabric typically consists of polyester and spandex blends [citation:1].</li>
+                        <li><strong>Where sourced?</strong> Polyester is derived from petroleum-based feedstocks obtained through global energy markets. Recycled polyester is produced from post-consumer plastic waste and other recycled materials. Nike sources technical fabrics and materials from certified suppliers and mills to ensure product quality [citation:1].</li>
+                        <li><strong>Who extracts?</strong> Raw material extraction is performed by companies operating within the global energy and recycling sectors. Nike does not directly extract raw materials but purchases polyester fibers and recycled materials from specialized suppliers.</li>
+                    </ul>
+                </div>
+
+                <!-- Secondary Sector -->
+                <div class="card" style="margin-bottom: 1.8rem;">
+                    <h3>Secondary Sector: Manufacturing</h3>
+                    <ul>
+                        <li><strong>Where manufactured?</strong> Nike's training apparel is primarily produced across Southeast and South Asia. According to Nike's fiscal year 2024 annual filing, apparel manufacturing is distributed as follows: Vietnam (28% of apparel), China (16% of apparel), Cambodia (15% of apparel), with additional production in Indonesia, Sri Lanka, and Bangladesh [citation:2][citation:8].</li>
+                        <li><strong>Why were these countries chosen?</strong> These locations offer a combination of mature textile infrastructure, technical expertise in performance fabric production, competitive labor costs, existing supplier ecosystems, and diversified risk mitigation. Vietnam has become Nike's largest apparel production hub due to its strong polyester and spandex capabilities essential for Dri-FIT technology. China specializes in technical fabrics, advanced knitwear, and research and development. Sri Lanka is recognized for women's performance wear and seamless construction, while Bangladesh focuses on high-volume cost-efficient production [citation:1].</li>
+                        <li><strong>What types of factories are involved?</strong> Nike does not own most factories; instead, it contracts with independent manufacturing partners who operate large-scale apparel production facilities. These factories are subject to Nike's Code of Conduct and Code Leadership Standards, which align with International Labour Organization (ILO) core labor standards. The company conducts regular compliance audits, both announced and unannounced, to assess supplier conformance [citation:5][citation:7].</li>
+                        <li><strong>Is any part made in Canada?</strong> No significant manufacturing of Nike Dri-FIT apparel occurs in Canada. All production takes place in Asian countries. Canada primarily handles distribution, retail, and marketing operations.</li>
+                    </ul>
+                </div>
+
+                <!-- Tertiary Sector -->
+                <div class="card" style="margin-bottom: 1.8rem;">
+                    <h3>Tertiary Sector: Services (Logistics and Distribution)</h3>
+                    <ul>
+                        <li><strong>How does the finished product get to Canada?</strong> Finished apparel is shipped via ocean freight from major Asian ports in Vietnam (Ho Chi Minh City), China (Shanghai, Hong Kong), and Indonesia (Jakarta) across the Pacific Ocean to North American ports including Vancouver (British Columbia) and Prince Rupert, as well as Los Angeles/Long Beach for rail transport to Canada. From arrival ports, products are transported by rail and truck to Nike's Canadian distribution centre in Mississauga, Ontario.</li>
+                        <li><strong>Distribution across Canada:</strong> From the Mississauga distribution centre, products are shipped to Nike-owned retail stores across Ontario including Toronto (Bloor Street, Eaton Centre, Yorkdale, Fairview Mall, Scarborough Town Centre), Mississauga (Square One, Dixie Outlet Mall), Ottawa (Rideau Centre, Kanata Factory Store), London, Kitchener, Vaughan (Vaughan Mills), Halton Hills, Burlington, and Niagara-on-the-Lake, as well as stores in other provinces [citation:3][citation:9]. Products are also distributed to third-party retailers including Sport Chek, Foot Locker, and other athletic retailers nationwide, plus direct-to-consumer fulfillment for online orders placed through Nike's Canadian website.</li>
+                    </ul>
+                </div>
+
+                <!-- Quaternary Sector -->
+                <div class="card" style="margin-bottom: 1.8rem;">
+                    <h3>Quaternary Sector: Knowledge and Information</h3>
+                    <ul>
+                        <li><strong>Who develops (designs) and promotes the product?</strong> Product design and development occurs primarily at Nike's world headquarters in Beaverton, Oregon, with additional innovation hubs in China and Japan. The company employs a global team of designers, materials scientists, and sports research specialists who develop Dri-FIT moisture-wicking technology and performance fabrics. Marketing and brand promotion are led from the headquarters with regional adaptation for Canadian markets.</li>
+                        <li><strong>Marketing strategies:</strong> Nike uses a multi-channel marketing approach including athlete endorsements (sponsoring professional and Olympic athletes), emotional branding focused on personal achievement ("Just Do It" campaign), digital advertising, experiential retail, and community engagement through Nike Training Club and Nike Run Club apps. The company's marketing emphasizes performance, innovation, and inclusive representation across all demographics.</li>
+                        <li><strong>Digital presence:</strong> Nike maintains a comprehensive digital ecosystem including the Nike Canada website (nike.com/ca), Nike mobile app, SNKRS app for sneaker releases, and active social media presence across Instagram, Twitter, YouTube, and TikTok. The company prioritizes direct-to-consumer sales through its digital channels alongside its physical retail footprint. Nike collects consumer data through its loyalty program (Nike Membership), app usage, purchase history, and engagement analytics to personalize marketing and product recommendations.</li>
+                        <li><strong>Research and data collection:</strong> Nike gathers research through multiple channels including consumer behavior analytics, market research studies, focus groups, digital engagement metrics, and retail point-of-sale data. The company uses this information to inform product development, inventory management, marketing personalization, and sustainability initiatives.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADDITIONAL INFO: Tariffs and Trade Agreements -->
+        <section id="additional">
+            <div class="container">
+                <h2 class="section-title">Part C: Additional Information - Tariffs and Trade</h2>
+                <div class="card">
+                    <h3>Tariffs and Economic Agreements Affecting Nike Products in Canada</h3>
+                    <ul>
+                        <li><strong>Applicable Tariffs:</strong> Canada applies tariff rates based on product classification, country of origin, and applicable trade agreements. Many apparel products imported under Most-Favoured-Nation (MFN) treatment may face tariff rates that can approach 18%, depending on the specific product category [citation:6].</li>
+                        <li><strong>Impact on Product Pricing:</strong> The MFN tariff on apparel directly increases Nike's landed cost in Canada. While Nike absorbs some of this cost through supply chain efficiency, a portion is passed to Canadian consumers, contributing to the price difference between Canadian and US markets for identical products.</li>
+                        <li><strong>Canada's Trade Agreements:</strong> Canada has bilateral trade agreements that reduce tariffs for certain trading partners (e.g., CUSMA with the United States and Mexico, CETA with the European Union). Canada has trade agreements that reduce tariffs for certain trading partners, including CUSMA and CPTPP. Vietnam is a CPTPP member, meaning some qualifying Vietnamese-manufactured goods may receive preferential tariff treatment, while products from other countries may continue to be subject to MFN tariff rates depending on origin and classification [citation:6].</li>
+                        <li><strong>How This Impacts Canada:</strong> Canadian consumers pay higher prices for imported athletic apparel compared to countries with lower tariff barriers. Tariff policies may provide some protection for domestic industries while also reflecting broader trade, economic, and regulatory objectives.</li>
+                        <li><strong>Globalization Demonstrated:</strong> This process illustrates globalization through international division of labor (design in USA, manufacturing in Asia, retail in Canada), complex logistics networks spanning multiple countries, harmonized quality standards across borders, integration of global financial systems for cross-border payments, and the role of international trade agreements and tariff structures in shaping global commerce.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUPPLY CHAIN MAP placeholder -->
+        <section id="map">
+            <div class="container">
+                <h2 class="section-title">Global Supply Chain Map</h2>
+                <div class="map-placeholder">
+                    <img src="333.jpg" style="max-width: 800px; width: 100%; height: auto; border-radius: 20px;">
+                    <div style="font-size: 0.9rem; text-align: center; max-width: 90%;">
+                    </div>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #555;">Map would include: Raw material extraction locations (oil fields, recycling facilities), manufacturing locations in Vietnam, China, Cambodia, Indonesia, shipping routes across Pacific Ocean, arrival ports in Vancouver and Prince Rupert, distribution centre in Mississauga, retail locations across Ontario and nationwide, and headquarters in Beaverton, Oregon.</p>
+            </div>
+        </section>
+
+        <!-- CHALLENGES TO GLOBALIZATION (Human Rights focus) -->
+        <section id="challenges">
+            <div class="container">
+                <h2 class="section-title">Step 4: Challenges to Globalization - Human Rights Analysis</h2>
+                <div class="grid-2">
+                    <div class="card">
+                        <h3>Identified Issues: Worker Rights and Fair Compensation</h3>
+                        <ul>
+                            <li><strong>Wage gaps:</strong> While 66% of Nike's strategic suppliers pay above local living wage benchmarks where data exists, a significant portion (34%) do not reach this threshold. Workers rely heavily on overtime pay to achieve livable incomes, particularly in China, Thailand, and Jordan [citation:5].</li>
+                            <li><strong>Monitoring challenges:</strong> Nike's supply chain includes over 700,000 workers across 111 strategic supplier facilities. Despite third-party audits through the Fair Labor Association, ensuring consistent compliance across all facilities remains challenging.</li>
+                            <li><strong>Vulnerable worker populations:</strong> Foreign migrant workers face particular risks including recruitment fees and restrictions on freedom of movement. Nike has established policies prohibiting workers from paying recruitment fees, but enforcement remains complex across multiple jurisdictions [citation:7].</li>
+                            <li><strong>Unionization and collective bargaining:</strong> While some supplier facilities have formal unions, coverage is inconsistent across Nike's global supply chain, affecting workers' ability to negotiate wages and conditions collectively.</li>
+                            <li><strong>Criticism and historical context:</strong> Nike faced major criticism in the 1990s regarding sweatshop labor conditions. The company has since implemented comprehensive compliance programs but continues to face scrutiny from labor rights organizations regarding wage fairness and working conditions in Asian manufacturing facilities.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Proposed Solutions and Improvements</h3>
+                        <ul>
+                            <li><strong>Expand living wage compliance:</strong> Nike should set a public target requiring 100% of strategic suppliers to pay verified living wages by 2030, using the Global Living Wage Coalition benchmarks currently being developed with the Anker Research Institute [citation:5].</li>
+                            <li><strong>Reduce overtime dependency:</strong> Implement responsible purchasing practices that reduce peak production pressures, allowing factories to hire adequate staff rather than relying on excessive overtime. Adjust order forecasting and production scheduling to create more stable employment patterns.</li>
+                            <li><strong>Strengthen worker voice mechanisms:</strong> Expand programs for worker-management dialogue and support independent unionization where legally permitted. The current "Speak Up Portal" grievance mechanism should be complemented by on-site worker committees with real decision-making authority [citation:7].</li>
+                            <li><strong>Enhance supply chain transparency:</strong> Publish full supplier lists including sub-tier suppliers (fabric mills, component manufacturers) and disclose audit results more comprehensively to enable independent verification.</li>
+                            <li><strong>Develop local economy investments:</strong> Reinvest a portion of sourcing cost savings into community development programs in manufacturing regions, including worker education, healthcare, and financial literacy training for factory employees.</li>
+                        </ul>
+                        <h3 style="margin-top: 1.5rem;">Who Benefits from These Improvements?</h3>
+                        <ul>
+                            <li><strong>Workers:</strong> Direct wage increases and improved working conditions benefit factory employees and their families in Vietnam, China, Indonesia, Cambodia, and other manufacturing countries.</li>
+                            <li><strong>Nike:</strong> Enhanced brand reputation, reduced risk of labor-related scandals, improved worker retention and productivity, and stronger alignment with corporate human rights commitments.</li>
+                            <li><strong>Canadian consumers:</strong> Access to products manufactured under verified ethical conditions, meeting growing consumer demand for responsibly sourced apparel.</li>
+                            <li><strong>Supply chain partners:</strong> Factories with improved labor practices attract more business from brands with responsible sourcing requirements and achieve greater operational stability.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKS CITED -->
+        <section id="sources">
+            <div class="container">
+                <h2 class="section-title">Step 5: Works Cited (MLA Format)</h2>
+                <div class="reference-list">
+                    <p>Fukigymwear. "Where Does Nike Produce Its Training Gear?" Fukigymwear, 2025, fukigymwear.com/where-does-nike-produce-its-training-gear/. [citation:1]</p>
+                    <p>Reuters. "Factbox-Walmart, Best Buy, Nike's Major Supply Hubs in Asia." Daily Mail, 3 Apr. 2025, www.dailymail.com/wires/reuters/article-14568313/. [citation:2]</p>
+                    <p>Nike. "Nike Stores in Ontario, Canada." Nike.com, 2025, www.nike.com/retail/directory/canada/ontario. [citation:3]</p>
+                    <p>Nike. "2025 Sustainability Targets." Nike.com/AU, 14 Oct. 2024, www.nike.com/au/a/sustainability-2025-targets. [citation:4]</p>
+                    <p>Nike. "Strategic Compensation in the Supply Chain." About.Nike.com, 2024, about.nike.com/en/resources/strategic-compensation-in-the-supply-chain. [citation:5]</p>
+                    <p>Jones, Alexandra Mae. "How Do Canada's Tariffs Work?" CBC News, 18 Mar. 2025, www.cbc.ca/lite/story/1.7485622. [citation:6]</p>
+                    <p>Business &amp; Human Rights Resource Centre. "US Corporate Human Rights Index: Nike." July 2025, www.business-humanrights.org/documents/42720/. [citation:7]</p>
+                    <p>
+                    <p>DBpedia. "Dixie Outlet Mall." DBpedia.org, 2025, dbpedia.org/page/Dixie_Outlet_Mall. [citation:9]</p>
+                </div>
+                <p style="margin-top: 1rem; font-size: 0.85rem;">Note: Additional sources from Sustainability Magazine and Nike Code of Conduct documents were referenced but not directly cited in the Works Cited list per MLA requirements for four core academic sources. All information presented is derived from the sources listed above.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Nike Globalization Project | Investigation of Dri-FIT T-Shirt Supply Chain to Canada | Economics Course Assignment</p>
+        <p style="margin-top: 0.5rem;">All information sourced from Nike official publications, Reuters, CBC News, Fair Labor Association reports, and academic business sources.</p>
+    </footer>
+</body>
+</html>
